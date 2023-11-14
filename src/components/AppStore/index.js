@@ -301,7 +301,6 @@ class AppStore extends Component {
   state = {
     activeTabId: tabsList[0].tabId,
     searchInput: '',
-    initiallyApps: appsList,
   }
 
   getFilteredApp = () => {
@@ -321,9 +320,9 @@ class AppStore extends Component {
   }
 
   render() {
-    const {activeTabId, searchInput, initiallyApps} = this.state
+    const {activeTabId, searchInput} = this.state
     const filteredAppDetails = this.getFilteredApp()
-    const filteredSearchInput = initiallyApps.filter(eachItem =>
+    const filteredSearchInput = filteredAppDetails.filter(eachItem =>
       eachItem.appName.includes(searchInput),
     )
     return (
@@ -334,6 +333,10 @@ class AppStore extends Component {
           className="input"
           placeholder="search"
           onChange={this.onChangeSearchInput}
+        />
+        <img
+          src="https://assets.ccbp.in/frontend/react-js/app-store/app-store-search-img.png"
+          alt="search icon"
         />
 
         <ul className="tabs-list">
@@ -348,7 +351,7 @@ class AppStore extends Component {
         </ul>
 
         <ul className="app-item-list">
-          {filteredAppDetails.map(eachApp => (
+          {filteredSearchInput.map(eachApp => (
             <AppItem key={eachApp.appId} appDetails={eachApp} />
           ))}
         </ul>
