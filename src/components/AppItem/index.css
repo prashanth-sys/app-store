@@ -1,0 +1,22 @@
+/* Write your CSS here */
+.app-container {
+  width: 339px;
+  background-color: white;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  text-align: center;
+}
+.app-image {
+  width: 40%;
+  height: 40%;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+.description {
+  font-size: 21px;
+  font-family: 'Bree serif';
+  color: #1e293b;
+}

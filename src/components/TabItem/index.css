@@ -1,0 +1,18 @@
+/* Write your CSS here */
+.list-tab-container {
+  padding-right: 9px;
+}
+.button {
+  font-family: 'Roboto';
+  color: #7b8794;
+  font-weight: 500;
+  font-size: 17px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.active-tab {
+  border-bottom: 2px solid #0b69ff;
+  color: #3e4c59;
+}
